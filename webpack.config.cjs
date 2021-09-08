@@ -5,6 +5,11 @@ module.exports = {
   entry: './src/index.js',
   devtool: 'eval-cheap-module-source-map',
   devServer: {
+    compress: true,
+    port: '8080',
+    allowedHosts: [
+        '.amazonaws.com'
+    ],
     static: [
       {
         directory: path.join(__dirname, 'data'),
