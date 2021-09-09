@@ -6,4 +6,4 @@ COPY . ./
 RUN npm run build
 
 EXPOSE 8080
-CMD ["/usr/local/bin/node", "/index.js" ]
+CMD ["npm", "run", "start"]
