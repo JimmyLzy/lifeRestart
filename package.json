@@ -6,7 +6,7 @@
         "test": "node test",
         "xlsxTransform": "node utils/xlsxTransform.js data",
         "dev": "webpack serve --open /view/index.html",
-        "start": "node /public/bundle.js",
+        "start": "webpack serve",
         "build": "webpack --mode production"
     },
     "dependencies": {
