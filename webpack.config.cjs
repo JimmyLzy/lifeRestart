@@ -10,6 +10,9 @@ module.exports = {
     allowedHosts: [
         '.amazonaws.com'
     ],
+    client: {
+      logging: 'info',
+    },
     static: [
       {
         directory: path.join(__dirname, 'data'),

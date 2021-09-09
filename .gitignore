@@ -108,3 +108,6 @@ utils/xlsxTransform-*
 /.idea
 
 __localStorage.json
+
+node_modules
+package-lock.json
