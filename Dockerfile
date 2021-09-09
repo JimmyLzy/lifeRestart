@@ -1,9 +1,9 @@
-FROM node:latest
+FROM node:latest as builder
 WORKDIR /app
 COPY package.json ./
 RUN npm install
 COPY . ./
 RUN npm run build
 
-EXPOSE 8080
-CMD ["npm", "run", "start"]
+FROM nginx:1.14.1-alpine
+COPY --from=builder . /usr/share/nginx/html
