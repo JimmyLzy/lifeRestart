@@ -400,6 +400,11 @@ body {
   text-align: center;
 }
 
+.attributelabel {
+  display: inline-block;
+  width: 8rem;
+}
+
 .propbtn {
   position: relative;
   cursor: pointer;
