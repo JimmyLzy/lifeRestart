@@ -98,6 +98,12 @@ body {
   flex: 0 1 auto;
 }
 
+.home-ads {
+  display: inline-block;
+  height: 100px;
+  width: 300px;
+}
+
 .mainbtn {
   margin: 0.5rem 1rem 1rem;
   padding: 0.5rem 1.5rem;
