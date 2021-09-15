@@ -193,6 +193,7 @@ class App{
 
         // Property
         // hint of extension tobermory.es6-string-html
+        // ramdon coment
         const propertyPage = $(/*html*/`
         <div id="main">
             <div class="head" style="font-size: 1.6rem">
