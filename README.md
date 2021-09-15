@@ -1,6 +1,6 @@
 # lifeRestart
 
-<a href="https://discord.gg/U3qrf49NMQ"><img src="https://img.shields.io/discord/883382868427014255?color=%23FEE75C&label=Discord&logo=discord&logoColor=white&style=for-the-badge" /></a>
+<a href="https://discord.gg/rCetjY9K"><img src="https://img.shields.io/discord/887806403820007487?color=%23FEE75C&label=Discord&logo=discord&logoColor=white&style=for-the-badge" /></a>
 
 English | [简体中文](./README-zh_CN.md)
 
