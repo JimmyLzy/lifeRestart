@@ -53,11 +53,12 @@ class App{
         `);
 
         // Index
+        // removed <button id="specialthanks">Special Thanks</button>
+        // was between rank and themeToggleBtn
         const indexPage = $(`
         <div id="main">
             <div id="cnt" class="head">Restarted 1 times</div>
             <button id="rank">Leaderboard</button>
-            <button id="specialthanks">Special Thanks</button>
             <button id="themeToggleBtn">Dark Mode</button>
             <div id="title">
                 LIFE RESTART SIMULATOR<br>
