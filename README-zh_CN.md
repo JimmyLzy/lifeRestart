@@ -15,7 +15,7 @@
 1. 下载项目代码。
 
 ```bash
-git clone https://github.com/VickScarlet/lifeRestart.git my-project
+git clone https://github.com/JimmyLzy/lifeRestart.git my-project
 cd my-project
 ```
 
