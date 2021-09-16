@@ -6,7 +6,7 @@
         "test": "node test",
         "xlsxTransform": "node utils/xlsxTransform.js data",
         "dev": "webpack serve --open /view/index.html",
-        "start": "webpack serve",
+        "start": "webpack serve --https-key ./cert/private.key --https-cert ./cert/re-zero_online.crt --https-cacert ./cert/csr.pem",
         "build": "webpack --mode production"
     },
     "dependencies": {

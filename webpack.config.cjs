@@ -5,6 +5,12 @@ module.exports = {
   entry: './src/index.js',
   devtool: 'eval-cheap-module-source-map',
   devServer: {
+    /*https: {
+      cacert: './cert/csr.pem',
+      key: './cert/private.key',
+      cert: './cert/re-zero_online.crt',
+      requestCert: true,
+    },*/
     compress: true,
     port: '8080',
     allowedHosts: [
