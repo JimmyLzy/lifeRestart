@@ -14,6 +14,7 @@ module.exports = {
     compress: true,
     port: '8080',
     allowedHosts: [
+        're-zer0.com',
         '.amazonaws.com'
     ],
     client: {
