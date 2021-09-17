@@ -1,6 +1,16 @@
 version: 0.2
 
 phases:
+  install:
+    runtime-versions:
+      nodejs: 8
+    commands:
+      - aws sts get-caller-identity
+      - mkdir ~/.aws/ && touch ~/.aws/config
+      - echo "[default]" > ~/.aws/config
+      - echo "role_arn = arn:aws:iam::521117903313:role/service-role/codebuild-rezero-service-role" >> ~/.aws/config
+      - echo "credential_source = EcsContainer" >> ~/.aws/config
+      - aws sts get-caller-identity
   pre_build:
     commands:
       - echo Logging in to Amazon ECR...
