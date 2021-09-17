@@ -2,8 +2,6 @@ version: 0.2
 
 phases:
   install:
-    runtime-versions:
-      nodejs: 8
     commands:
       - aws sts get-caller-identity
       - mkdir ~/.aws/ && touch ~/.aws/config
