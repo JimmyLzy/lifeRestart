@@ -3,12 +3,12 @@ version: 0.2
 phases:
   install:
     commands:
-      - aws sts get-caller-identity
-      - mkdir ~/.aws/ && touch ~/.aws/config
-      - echo "[default]" > ~/.aws/config
-      - echo "role_arn = arn:aws:iam::521117903313:role/service-role/codebuild-rezero-service-role" >> ~/.aws/config
-      - echo "credential_source = EcsContainer" >> ~/.aws/config
-      - aws sts get-caller-identity
+      - export ASSUME_ROLE_ARN=arn:aws:iam::521117903313:role/service-role/codebuild-rezero-service-role
+      - TEMP_ROLE=$(aws sts assume-role --role-arn $ASSUME_ROLE_ARN --role-session-name test)
+      - export TEMP_ROLE
+      - export AWS_ACCESS_KEY_ID=$(echo "${TEMP_ROLE}" | jq -r '.Credentials.AccessKeyId')
+      - export AWS_SECRET_ACCESS_KEY=$(echo "${TEMP_ROLE}" | jq -r '.Credentials.SecretAccessKey')
+      - export AWS_SESSION_TOKEN=$(echo "${TEMP_ROLE}" | jq -r '.Credentials.SessionToken')
   pre_build:
     commands:
       - echo Logging in to Amazon ECR...
@@ -17,7 +17,7 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...          
-      - docker build -t $IMAGE_REPO_NAME:$IMAGE_TAG .
+      - docker build -t $IMAGE_REPO_NAME:$IMAGE_TAG --build-arg AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID --build-arg AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY --build-arg AWS_SESSION_TOKEN=$AWS_SESSION_TOKEN .
       - docker tag $IMAGE_REPO_NAME:$IMAGE_TAG $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG      
   post_build:
     commands:
