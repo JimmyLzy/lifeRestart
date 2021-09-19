@@ -11,6 +11,9 @@ module.exports = {
       cert: './cert/re-zero_online.crt',
       requestCert: true,
     },*/
+    historyApiFallback: {
+      index: "/view/index.html"
+    },
     compress: true,
     port: '8080',
     allowedHosts: [
@@ -43,6 +46,7 @@ module.exports = {
     path: path.resolve(__dirname, 'public'),
     filename: 'bundle.js',
     clean: true,
+    publicPath: "/"
   },
   // resolve: {
   //   extensions: ['.js'],
