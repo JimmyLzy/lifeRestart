@@ -391,7 +391,7 @@ class App{
             .click(()=>{
                 $("#lifeTrajectory").addClass("deleteFixed");
                 const ua = navigator.userAgent.toLowerCase();
-                const li = $(`<li><span></span><span>~~~ Flashback from http://re-zero.online ~~~</span></li>`);
+                const li = $(`<li><span></span><span>~~~ Flashback from https://re-zer0.com ~~~</span></li>`);
                 li.appendTo('#lifeTrajectory');
                 domtoimage.toJpeg(document.getElementById('lifeTrajectory'))
                     .then(function (dataUrl) {
