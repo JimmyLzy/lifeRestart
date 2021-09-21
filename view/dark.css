@@ -79,11 +79,12 @@ body {
   color: #EEEEEE;
 }
 
-#restart {
-  position: fixed;
-  top: 65%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+button#restart{
+  background: #fc2c03;
+}
+
+button#cancel{
+  background: #03e8fc;
 }
 
 #restart .iconfont {
@@ -128,6 +129,25 @@ body {
 }
 
 .btn-area>.mainbtn {
+  flex: 1;
+}
+.btn-area-main{
+  display: flex;
+  flex-direction: row;
+  margin-top: 50vh;
+}
+
+.btn-area-main>.mainbtn {
+  flex: 1;
+}
+
+.btn-area-main{
+  display: flex;
+  flex-direction: row;
+  margin-top: 50vh;
+}
+
+.btn-area-main>.mainbtn {
   flex: 1;
 }
 
