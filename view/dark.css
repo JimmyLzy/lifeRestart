@@ -80,11 +80,11 @@ body {
 }
 
 button#restart{
-  background: #fc2c03;
+  background: #A61F11;
 }
 
 button#cancel{
-  background: #03e8fc;
+  background: #115CA6;
 }
 
 #restart .iconfont {
